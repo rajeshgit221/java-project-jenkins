@@ -1,13 +1,12 @@
 pipeline {
-    agent {
-        label 'slave3'
-    }
+    agent any
 
-    stages {
-        stage('build') {
-            steps {
-                sh 'ant -f build.xml -V'
-				      }
-            }
-        }
-  }
+     stages {
+           stage('build') {
+                   steps {
+                      sh 'ant -f build.xml -V'
+                   }
+           }
+     }
+
+}
